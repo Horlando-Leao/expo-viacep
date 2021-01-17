@@ -17,13 +17,6 @@ export const getAddress = async (cep) => {
 
   saveCep({rua: endereco.rua, bairro: endereco.bairro, uf:endereco.uf});
 
-  queryCep(1);
-  
-
-  /* findId(1)
-  .then(cep => console.log(cep))
-  .catch(err => console.log(err)) */
-
   return endereco;
   
 };
