@@ -25,7 +25,7 @@ export const queryCep =  (id) => {
   }
 };
 
-export const queryCepAll =  (id) => {
+export const queryCepAll =  () => {
 
   return myBaseEnderecos;
 

@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-import { saveCep, queryCep } from '../dataBaseTemp/dml';
+import { saveCep } from '../dataBaseTemp/dml';
+import { printAll } from '../dataBaseTemp/tools';
 
 
 export const getAddress = async (cep) => {
@@ -17,6 +18,8 @@ export const getAddress = async (cep) => {
 
   saveCep({rua: endereco.rua, bairro: endereco.bairro, uf:endereco.uf});
 
+  printAll();
+  
   return endereco;
   
 };
