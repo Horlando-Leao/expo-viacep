@@ -31,8 +31,7 @@ export default function TabTwoScreen() {
             <Text style={styles.title}>Rua:{item.rua}; {"\n"}Bairro: {item.bairro}; {"\n"}uf:{item.uf} </Text></>
         )}
       />
-      
-      
+       
     </View>
   );
 }
