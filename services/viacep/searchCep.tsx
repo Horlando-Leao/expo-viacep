@@ -1,10 +1,7 @@
 import axios from 'axios';
 
-import { create } from '../sqlite/Ceps';
-import { findAll } from '../sqlite/Ceps';
-import { findId } from '../sqlite/Ceps';
+import { saveCep, queryCep } from '../dataBaseTemp/dml';
 
-import { printCep } from '../sqlite/tools'
 
 export const getAddress = async (cep) => {
   const response = await axios.get(`http:viacep.com.br/ws/${cep}/json`);
@@ -16,13 +13,16 @@ export const getAddress = async (cep) => {
       localidade: response.data.localidade,
       uf: response.data.uf
   };
-  console.log('log-1', endereco);
+  console.log('consulta endereço: ', endereco);
 
-  create({rua: endereco.rua, bairro: endereco.bairro, uf:endereco.uf});
+  saveCep({rua: endereco.rua, bairro: endereco.bairro, uf:endereco.uf});
 
-  findId(-1)
-  .then(cep => printCep(cep))
-  .catch(err => console.log(err))
+  queryCep(1);
+  
+
+  /* findId(1)
+  .then(cep => console.log(cep))
+  .catch(err => console.log(err)) */
 
   return endereco;
   

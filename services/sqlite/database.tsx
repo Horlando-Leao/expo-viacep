@@ -1,5 +1,7 @@
 
 
+
+
 export const openConnectionDB = async (cep) => {
     //ABRE E FECHA CONEXÃO COM O BANCO
     await console.log('openConnectionDB');  
@@ -7,8 +9,8 @@ export const openConnectionDB = async (cep) => {
 };
 
 export const saveCep = async () => {
-    await console.log('save');  
-
+    await console.log('save'); 
+    
 };
 
 export const queryCep = async (cep) => {
