@@ -1,3 +1,5 @@
+import { queryCep } from './dml';
+
 export const printAll = () => {
     var index = 0;
     var call = 'true';
