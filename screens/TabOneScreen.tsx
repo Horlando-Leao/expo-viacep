@@ -72,6 +72,6 @@ const styles = StyleSheet.create({
     width:200, 
     borderColor: 'white', 
     borderWidth: 1, 
-    color:'white',
+    color:'black',
   },
 });
